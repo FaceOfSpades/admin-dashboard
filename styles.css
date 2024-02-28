@@ -1,8 +1,8 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
-    height: 1500px;
+    
 }
 
 .dashboard {
@@ -10,12 +10,27 @@
     grid-row: span 2;
     color: white;
     font-weight: 900;
+    display: grid;
+    grid-template-rows: 1fr 4fr 55%;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 40px;
+}
+
+.dbmiddle,
+.dbbottom {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    gap: 30px;
 }
 
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-left: 20px;
+    margin-right: 100px;
 }
 
 .htop {
@@ -25,6 +40,7 @@
     gap: 20px;
     font-weight: 900;
     font-size: 30px;
+    
 }
 
 input {
@@ -33,13 +49,13 @@ input {
     height: 40px;
     background-color: lightgray;
     border-radius: 30px;
-    margin-right: 100px;
+    margin-right: auto;
 }
 
 .hbotleft {
     display: flex;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 h1 {
@@ -50,9 +66,8 @@ h1 {
 .hbotright {
     display: flex;
     margin: auto;
-    margin-right: 100px;
     gap: 40px;
-  
+    margin-right: 0;
 }
 
 button {
@@ -66,7 +81,75 @@ button {
     border: 0;
 }
 
+h2 {
+    margin: 0;
+}
+
 .content {
     background-color: lightgray;
     display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 60px;
+    gap: 60px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#your_projects {
+    grid-row: span 2;
+}
+
+.projects {
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 40px 0px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    font-weight: 300;
+    padding: 10px 40px;
+}
+
+.icons {
+    margin-left: auto;
+}
+
+#announcements_card {
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 60px;
+    display: grid;
+    margin-top: 40px;
+}
+
+#announcement1, #announcement2, #announcement3 {
+    overflow: hidden;
+}
+
+#trending_card {
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+    
+}
+
+#trending_card p{
+    font-weight: 300;
+    margin-top: 10px;
 }
