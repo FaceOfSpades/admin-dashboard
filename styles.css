@@ -1,8 +1,12 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
-    
+    grid-template-rows: 350px 5fr;
 }
 
 .dashboard {
@@ -17,6 +21,22 @@
     padding: 40px;
 }
 
+.filter_white {
+    filter: invert(100%) sepia(3%) saturate(11%) hue-rotate(66deg) brightness(103%) contrast(102%);
+}
+
+.dbtop div {
+   display: flex;
+   gap: 30px;
+   align-items: center;
+}
+
+.dbmiddle div,
+.dbbottom div {
+    display: flex;
+    gap: 15px;
+}
+
 .dbmiddle,
 .dbbottom {
     display: flex;
@@ -29,7 +49,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-right: 100px;
 }
 
@@ -37,47 +57,54 @@
     grid-column: span 2;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 40px;
     
 }
 
 input {
-    border: 0;
+    border: none;
     width: 60%;
-    height: 40px;
+    height: 60px;
     background-color: lightgray;
     border-radius: 30px;
     margin-right: auto;
+    font-size: 30px;
+}
+
+input:focus {
+    outline: none;
 }
 
 .hbotleft {
     display: flex;
     font-weight: 900;
     font-size: 25px;
+    margin-left: 50px;
+    align-items: center;
+    gap: 30px;
 }
 
 h1 {
     margin: 0;
-    margin-top: 20px;
 }
 
 .hbotright {
     display: flex;
     margin: auto;
-    gap: 40px;
+    gap: 60px;
     margin-right: 0;
 }
 
 button {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 900;
     background-color: rgb(73, 179, 214);
-    padding: 15px;
-    border-radius: 30px;
-    width: 150px;
+    padding: 20px;
+    border-radius: 40px;
+    width: 200px;
     border: 0;
 }
 
@@ -94,6 +121,7 @@ h2 {
     gap: 60px;
     font-size: 30px;
     font-weight: 900;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);
 }
 
 #your_projects {
@@ -116,21 +144,26 @@ h2 {
     grid-template-rows: 4fr 1fr;
     font-weight: 300;
     padding: 10px 40px;
+    border-left: 30px solid orange;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .icons {
     margin-left: auto;
+    display: flex;
+    gap: 40px;
 }
 
 #announcements_card {
     height: 80%;
     background-color: white;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
     padding: 20px 60px;
     display: grid;
     margin-top: 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 #announcement1, #announcement2, #announcement3 {
@@ -138,18 +171,24 @@ h2 {
 }
 
 #trending_card {
-    height: 70%;
+    height: 71%;
     background-color: white;
     border-radius: 10px;
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding: 30px;
-    
+    align-items: center;   
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
 }
 
-#trending_card p{
+#trending_card p {
     font-weight: 300;
     margin-top: 10px;
+}
+
+#trending_card div {
+    padding-top: 30px;
+    margin-left: 20px;
 }
